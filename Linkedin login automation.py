@@ -1,7 +1,7 @@
 from selenium import webdriver
 mail=input("Enter mail:")
 passw=input("Enter password:")
-b=webdriver.Chrome("C:\\Users\\VISERION\\Downloads\\chromedriver_win32\\chromedriver.exe")
+b=webdriver.Chrome("C:\\Users\\Downloads\\chromedriver_win32\\chromedriver.exe")
 b.get("https://www.linkedin.com/")
 email=b.find_element_by_id("session_key")
 email.send_keys(mail)
