@@ -1,0 +1,11 @@
+import imaplib
+gm=imaplib.IMAP4_SSL('imap.gmail.com')
+em=input('Enter your mail')
+pd=input('Password:')
+gm.login(em,pd)
+gm.select('INBOX')
+a,b=gm.status('INBOX','UNSEEN')
+print(a)
+print(b)
+c=str(b[0])
+print(c[18:22])
